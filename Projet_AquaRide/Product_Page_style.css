@@ -6,6 +6,10 @@
     padding:0;
 }
 
+body{
+   overflow-x: hidden;
+}
+
 .navbar-container {
     top: 0;
     width: 100%;
@@ -609,6 +613,12 @@ hr{
 /* MEDIA QUERY */
 
 @media screen and (max-width: 768px) {
+
+   body{
+      font-size: 16px;
+      overflow-x: hidden;
+   }
+   
     .container{
         display: flex;
         flex-direction: column;
