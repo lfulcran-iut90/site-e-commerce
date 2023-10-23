@@ -612,7 +612,7 @@ hr{
 
 /* MEDIA QUERY */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
 
    body{
       font-size: 16px;
@@ -649,6 +649,16 @@ hr{
     .images img{
         width: 325px;
         height: 291px;
+    }
+
+   .counter span{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
     }
 
     .info_product{
