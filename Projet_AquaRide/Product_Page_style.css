@@ -7,7 +7,7 @@
 }
 
 body{
-   overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 .navbar-container {
@@ -612,13 +612,13 @@ hr{
 
 /* MEDIA QUERY */
 
-@media screen and (max-width: 600px) {
+@media (max-width: 768px) {
 
-   body{
-      font-size: 16px;
-      overflow-x: hidden;
-   }
-   
+    body{
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+
     .container{
         display: flex;
         flex-direction: column;
@@ -636,6 +636,16 @@ hr{
         font-size: 30px;
     }
 
+    .counter span{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
     .navigationButtons .btn{
         width: 40px;
         height: 40px;
@@ -649,16 +659,6 @@ hr{
     .images img{
         width: 325px;
         height: 291px;
-    }
-
-   .counter span{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        font-size: 20px;
-        font-weight: 600;
-        cursor: pointer;
     }
 
     .info_product{
