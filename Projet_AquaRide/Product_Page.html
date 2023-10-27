@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Product_Page_style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
     <title> Produit </title>
 </head>
-<body>
 
+<body>
     <!-- NAVBAR DEBUT -->
     <div class="navbar-container">
         <div class="navbar">
-            <a href="" class="itemactive">Accueil</a>
+            <a href="index.html" class="itemactive">Accueil</a>
             <a href="" class="item">Produits</a>
             <a href="" class="item">Magasin</a>
             <a href="" class="item">Panier</a>
             <a href="" class="itemconnexion">Connexion</a>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+
+           
+            
+                <ul class="menu__box">
+                  <li><a class="menu__item" href="#">Accueil</a></li>
+                  <li><a class="menu__item" href="#">Produits</a></li>
+                  <li><a class="menu__item" href="#">Magasin</a></li>
+                  <li><a class="menu__item" href="#">Panier</a></li>
+                  <li><a class="menu__item" href="#">Connexion</a></li>
+                </ul>
+                
+              </div>
             <!-- BOUTON LIGHT/DARK -->
             <div class="theme-container shadow-dark">
                 <img id="theme-icon" src="https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/sun.svg" alt="ERR">
@@ -27,6 +47,7 @@
         </div>
     </div>
     <!-- NAVBAR FIN -->
+
 
     <div class="container">
         <div class="showProduct">
@@ -55,8 +76,9 @@
                 <div class="info">
                     <h2> 349€ </h2>
                     <p>
-                        La SunRider Grom est une planche de surf spécialement conçue pour les jeunes surfeurs en herbe. 
-                        Elle est légère et facile à manier, offrant un excellent équilibre pour les débutants. 
+                        La SunRider Grom est une planche de surf spécialement conçue pour les jeunes surfeurs en
+                        herbe.
+                        Elle est légère et facile à manier, offrant un excellent équilibre pour les débutants.
                         Elle est idéale pour apprendre à surfer tout en s'amusant.
                     </p>
                 </div>
@@ -69,11 +91,11 @@
                 </div>
                 <div class="dropdown">
                     <select>
-                      <option value="0">Tailles</option>
-                      <option value="1">5'2"</option>
-                      <option value="2">5'4"</option>
-                      <option value="3">5'8"</option>
-                      <option value="4">6'0"</option>
+                        <option value="0">Tailles</option>
+                        <option value="1">5'2"</option>
+                        <option value="2">5'4"</option>
+                        <option value="3">5'8"</option>
+                        <option value="4">6'0"</option>
                     </select>
                 </div>
             </div>
@@ -86,10 +108,12 @@
             </div>
         </div>
     </div>
+    </div>
+
 
     <!-- FOOTER DEBUT -->
 
-    <!--br>
+    <br>
     <hr>
     <div class="footer">
         <div class="leftfooter">
@@ -100,31 +124,33 @@
         </div>
         <div class="footercol">
             <h4>Magasin</h4>
-                <a href="">Hommes</a>
-                <a href="">Femmes</a>
-                <a href="">Enfants</a>
-                <a href="">Vêtements</a>
-                <a href="">Planche de surf</a>
-                <a href="">Carte de crédit</a>
-                <a href="">Evenement</a>
-                <a href="">Nouveautés</a>
+            <a href="">Hommes</a>
+            <a href="">Femmes</a>
+            <a href="">Enfants</a>
+            <a href="">Vêtements</a>
+            <a href="">Planche de surf</a>
+            <a href="">Carte de crédit</a>
+            <a href="">Evenement</a>
+            <a href="">Nouveautés</a>
         </div>
         <div class="footercol">
             <h4>Aide</h4>
-                <a href="">Centre d'aide</a>
-                <a href="">Charte du site</a>
-                <a href="">Contactez nous</a>
+            <a href="">Centre d'aide</a>
+            <a href="">Charte du site</a>
+            <a href="">Contactez nous</a>
         </div>
         <div class="footercol">
             <h4>A propos</h4>
-                <a href="">A propos de nous</a>
-                <a href="">Notre histoire</a>
-                <a href="">Notre technologie</a>
+            <a href="">A propos de nous</a>
+            <a href="">Notre histoire</a>
+            <a href="">Notre technologie</a>
         </div>
-    </div-->
+    </div>
+    </div>
+
 
     <!-- FOOTER FIN -->
-    
+
 
     <!-- Script pour le carousel -->
 
@@ -135,65 +161,65 @@
         const images = document.querySelector('.image-slideshow').children;
         const totalImages = images.length;
         let currentIndex = 0;
-    
-    
+
+
         // Evenement pour les boutons previous et next
         previous.addEventListener('click', () => {
-          previousImage()
+            previousImage()
         })
-    
+
         next.addEventListener('click', () => {
-          nextImage();
+            nextImage();
         })
-        
-        
+
+
         // Fonction pour aller à l'image suivante
-        function nextImage(){
-    
-          images[currentIndex].classList.remove('image1');
-            if(currentIndex == totalImages-1){
+        function nextImage() {
+
+            images[currentIndex].classList.remove('image1');
+            if (currentIndex == totalImages - 1) {
                 currentIndex = 0;
             }
-            else{
+            else {
                 currentIndex++;
             }
-    
-          images[currentIndex].classList.add('image1');
-          
+
+            images[currentIndex].classList.add('image1');
+
         }
-        
+
         // Fonction pour aller à l'image précédente
-        function previousImage(){
-    
-          images[currentIndex].classList.remove('image1');
-            if(currentIndex == 0){
-                currentIndex = totalImages-1;
+        function previousImage() {
+
+            images[currentIndex].classList.remove('image1');
+            if (currentIndex == 0) {
+                currentIndex = totalImages - 1;
             }
-            else{
+            else {
                 currentIndex--;
             }
-        
-          images[currentIndex].classList.add('image1');
-    
+
+            images[currentIndex].classList.add('image1');
+
         }
-        
+
     </script>
 
     <!-- Script pour le compteur -->
     <script>
         const plus = document.querySelector(".plus"),
-         minus = document.querySelector(".minus"),
-         num = document.querySelector(".num");
-        
+            minus = document.querySelector(".minus"),
+            num = document.querySelector(".num");
+
         let aPlus = 1;
 
-        plus.addEventListener("click", ()=>{
+        plus.addEventListener("click", () => {
             aPlus++;
             num.innerText = aPlus;
             console.log(aPlus);
         });
 
-        minus.addEventListener("click", ()=>{
+        minus.addEventListener("click", () => {
             if (aPlus > 1) {
                 aPlus--;
                 num.innerText = aPlus;
@@ -224,7 +250,7 @@
                 create a new DIV that will act as an option item: */
                 c = document.createElement("DIV");
                 c.innerHTML = selElmnt.options[j].innerHTML;
-                c.addEventListener("click", function(e) {
+                c.addEventListener("click", function (e) {
                     /* When an item is clicked, update the original select box,
                     and the selected item: */
                     var y, i, k, s, h, sl, yl;
@@ -232,12 +258,12 @@
                     sl = s.length;
                     h = this.parentNode.previousSibling;
                     for (i = 0; i < sl; i++) {
-                    if (s.options[i].innerHTML == this.innerHTML) {
-                        s.selectedIndex = i;
-                        h.innerHTML = this.innerHTML;
-                        y = this.parentNode.getElementsByClassName("same-as-selected");
-                        yl = y.length;
-                        for (k = 0; k < yl; k++) {
+                        if (s.options[i].innerHTML == this.innerHTML) {
+                            s.selectedIndex = i;
+                            h.innerHTML = this.innerHTML;
+                            y = this.parentNode.getElementsByClassName("same-as-selected");
+                            yl = y.length;
+                            for (k = 0; k < yl; k++) {
                                 y[k].removeAttribute("class");
                             }
                             this.setAttribute("class", "same-as-selected");
@@ -249,7 +275,7 @@
                 b.appendChild(c);
             }
             x[i].appendChild(b);
-            a.addEventListener("click", function(e) {
+            a.addEventListener("click", function (e) {
                 /* When the select box is clicked, close any other select boxes,
                 and open/close the current select box: */
                 e.stopPropagation();
@@ -260,23 +286,23 @@
         }
 
         function closeAllSelect(elmnt) {
-        /* A function that will close all select boxes in the document,
-        except the current select box: */
-        var x, y, i, xl, yl, arrNo = [];
-        x = document.getElementsByClassName("select-items");
-        y = document.getElementsByClassName("select-selected");
-        xl = x.length;
-        yl = y.length;
-        for (i = 0; i < yl; i++) {
-            if (elmnt == y[i]) {
-                arrNo.push(i)
-            } else {
-                y[i].classList.remove("select-arrow-active");
+            /* A function that will close all select boxes in the document,
+            except the current select box: */
+            var x, y, i, xl, yl, arrNo = [];
+            x = document.getElementsByClassName("select-items");
+            y = document.getElementsByClassName("select-selected");
+            xl = x.length;
+            yl = y.length;
+            for (i = 0; i < yl; i++) {
+                if (elmnt == y[i]) {
+                    arrNo.push(i)
+                } else {
+                    y[i].classList.remove("select-arrow-active");
+                }
             }
-        }
             for (i = 0; i < xl; i++) {
                 if (arrNo.indexOf(i)) {
-                x[i].classList.add("select-hide");
+                    x[i].classList.add("select-hide");
                 }
             }
         }
@@ -300,26 +326,27 @@
         setTheme();
 
         function toggleTheme() {
-        theme = theme === "light" ? "dark" : "light";
-        setTheme();
+            theme = theme === "light" ? "dark" : "light";
+            setTheme();
         }
 
         function setTheme() {
-        body.style.backgroundColor = theme === "light" ? 'white' : 'black'; // Si theme = light, applique dark et inversement
-        container.classList.remove(theme === "light" ? "shadow-dark" : "shadow-light");
-        container.classList.add(theme === "light" ? "shadow-light" : "shadow-dark");
-        themeIcon.src = theme === "light" ? sun : moon;
-        toggleDarkMode(theme === "dark");
+            body.style.backgroundColor = theme === "light" ? 'white' : 'black'; // Si theme = light, applique dark et inversement
+            container.classList.remove(theme === "light" ? "shadow-dark" : "shadow-light");
+            container.classList.add(theme === "light" ? "shadow-light" : "shadow-dark");
+            themeIcon.src = theme === "light" ? sun : moon;
+            toggleDarkMode(theme === "dark");
         }
 
         function toggleDarkMode(enable) {
-        if (enable) {
-            body.classList.add("dark-mode");
-        } else {
-            body.classList.remove("dark-mode");
+            if (enable) {
+                body.classList.add("dark-mode");
+            } else {
+                body.classList.remove("dark-mode");
+            }
         }
-    }
     </script>
 
 </body>
+
 </html>
